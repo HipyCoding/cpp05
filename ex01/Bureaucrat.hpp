@@ -6,14 +6,19 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 20:51:47 by candrese          #+#    #+#             */
-/*   Updated: 2025/06/26 22:54:13 by candrese         ###   ########.fr       */
+/*   Updated: 2025/07/01 22:49:22 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 
-#include <iostream>
+#include "Form.hpp"
+# include <iostream>
+# include <string>
+# include <stdexcept>
+
+class Form;
 
 class Bureaucrat
 {
@@ -33,6 +38,7 @@ public:
 
 	void incrementGrade();
 	void decrementGrade();
+	void signForm(Form& form);
 
 	class GradeTooHighException : public std::exception
 		{

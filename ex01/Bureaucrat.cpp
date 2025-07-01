@@ -6,11 +6,12 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 20:51:44 by candrese          #+#    #+#             */
-/*   Updated: 2025/06/26 22:54:02 by candrese         ###   ########.fr       */
+/*   Updated: 2025/07/01 23:05:22 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 //d efault constructor
 Bureaucrat::Bureaucrat() : name("Bureaucrat"), grade(150) {}
@@ -40,7 +41,7 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 // destructor
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << name << "destructor called" << std::endl;
+	std::cout << name << " destructor called" << std::endl;
 }
 
 // getter grade
@@ -80,6 +81,20 @@ void Bureaucrat::decrementGrade()
 	if (grade >= 150)
 		throw GradeTooLowException();
 	grade++;
+}
+
+// function to sign a form object
+void Bureaucrat::signForm(Form& form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << name << " signed " << form.getName() << std::endl;
+	} 
+	catch (std::exception& e)
+	{
+		std::cout << name << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
+	}
 }
 
 // overload output stream operator, printing a bureaucrat

@@ -4,7 +4,8 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++17 -fsanitize=address
 
 SRCS = main.cpp \
-	Bureaucrat.cpp
+	Bureaucrat.cpp \
+	Form.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
