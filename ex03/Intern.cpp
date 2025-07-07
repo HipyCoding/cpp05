@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christian <christian@student.42.fr>        +#+  +:+       +#+        */
+/*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 04:20:41 by christian         #+#    #+#             */
-/*   Updated: 2025/07/06 21:00:19 by christian        ###   ########.fr       */
+/*   Updated: 2025/07/07 23:48:08 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ Intern& Intern::operator=(const Intern& other)
 // destructor
 Intern::~Intern()
 {
-	std::cout << "Intern destructor called" << std::endl;
+	std::cout << " Intern destructor called" << std::endl;
 }
 
 // form creation functions

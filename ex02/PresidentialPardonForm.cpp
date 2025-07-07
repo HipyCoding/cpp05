@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christian <christian@student.42.fr>        +#+  +:+       +#+        */
+/*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 03:51:59 by christian         #+#    #+#             */
-/*   Updated: 2025/07/06 19:09:38 by christian        ###   ########.fr       */
+/*   Updated: 2025/07/07 23:46:11 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 // destructor
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-	std::cout << "PresidentialPardonForm destructor called" << std::endl;
+	std::cout << " PresidentialPardonForm destructor called" << std::endl;
 }
 
 // function that calls parent execute for checks

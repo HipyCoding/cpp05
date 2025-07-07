@@ -6,7 +6,7 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 15:49:58 by candrese          #+#    #+#             */
-/*   Updated: 2025/06/26 22:47:23 by candrese         ###   ########.fr       */
+/*   Updated: 2025/07/07 23:47:14 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 // destructor
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << name << "destructor called" << std::endl;
+	std::cout << name << " destructor called" << std::endl;
 }
 
 // getter grade

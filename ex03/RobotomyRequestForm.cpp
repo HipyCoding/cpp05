@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christian <christian@student.42.fr>        +#+  +:+       +#+        */
+/*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 03:52:05 by christian         #+#    #+#             */
-/*   Updated: 2025/07/03 04:13:11 by christian        ###   ########.fr       */
+/*   Updated: 2025/07/07 23:50:44 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& o
 // destructor
 RobotomyRequestForm::~RobotomyRequestForm()
 {
-	std::cout << "RobotomyRequestForm destructor called" << std::endl;
+	std::cout << " RobotomyRequestForm destructor called" << std::endl;
 }
 
 // execute function that calls parent execute for checks

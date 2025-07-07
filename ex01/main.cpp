@@ -6,7 +6,7 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 20:51:58 by candrese          #+#    #+#             */
-/*   Updated: 2025/07/01 23:04:26 by candrese         ###   ########.fr       */
+/*   Updated: 2025/07/07 23:00:44 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main() {
 
 	std::cout << "\n\n----- form creation should not work" << std::endl;
 	try {
-		Form invalid_form("Invalid", 0, 50);  // Too high
+		Form invalid_form("Invalid", 50, 0);  // Too high
 	} catch (std::exception& e) {
 		std::cout << "Exception: " << e.what() << std::endl;
 	}

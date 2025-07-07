@@ -6,7 +6,7 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 20:51:47 by candrese          #+#    #+#             */
-/*   Updated: 2025/07/01 22:49:22 by candrese         ###   ########.fr       */
+/*   Updated: 2025/07/07 23:41:56 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,16 @@ public:
 	void signForm(Form& form);
 
 	class GradeTooHighException : public std::exception
-		{
-			public:
-				const char* what() const noexcept override;
-		};
-		
-		class GradeTooLowException : public std::exception
-		{
-			public:
-				const char* what() const noexcept override;
-		};
+	{
+		public:
+			const char* what() const noexcept override;
+	};
+
+	class GradeTooLowException : public std::exception
+	{
+		public:
+		const char* what() const noexcept override;
+	};
 };
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& src);

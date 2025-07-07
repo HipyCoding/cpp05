@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christian <christian@student.42.fr>        +#+  +:+       +#+        */
+/*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 20:51:47 by candrese          #+#    #+#             */
-/*   Updated: 2025/07/03 04:11:44 by christian        ###   ########.fr       */
+/*   Updated: 2025/07/07 23:49:03 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,16 @@ public:
 	void executeForm(AForm const & form) const;
 
 	class GradeTooHighException : public std::exception
-		{
-			public:
-				const char* what() const noexcept override;
-		};
-		
-		class GradeTooLowException : public std::exception
-		{
-			public:
-				const char* what() const noexcept override;
-		};
+	{
+		public:
+			const char* what() const noexcept override;
+	};
+
+	class GradeTooLowException : public std::exception
+	{
+		public:
+			const char* what() const noexcept override;
+	};
 };
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& src);
