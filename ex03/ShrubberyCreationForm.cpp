@@ -6,7 +6,7 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 03:52:10 by christian         #+#    #+#             */
-/*   Updated: 2025/07/07 23:50:54 by candrese         ###   ########.fr       */
+/*   Updated: 2025/07/07 23:54:14 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,27 +61,14 @@ void ShrubberyCreationForm::executeAction() const
 		return;
 	}
 	
-	file << "        /\\        " << std::endl;
-	file << "       /  \\       " << std::endl;
-	file << "      /    \\      " << std::endl;
-	file << "     /______\\     " << std::endl;
-	file << "         ||        " << std::endl;
-	file << "         ||        " << std::endl;
-	file << "                   " << std::endl;
+	file << "                     " << std::endl;
 	file << "    /\\    /\\       " << std::endl;
 	file << "   /  \\  /  \\      " << std::endl;
 	file << "  /    \\/    \\     " << std::endl;
-	file << " /______________\\   " << std::endl;
-	file << "       ||||         " << std::endl;
-	file << "       ||||         " << std::endl;
-	file << "                   " << std::endl;
-	file << "      /\\           " << std::endl;
-	file << "     /  \\          " << std::endl;
-	file << "    /    \\         " << std::endl;
-	file << "   /______\\        " << std::endl;
-	file << "       ||           " << std::endl;
-	file << "       ||           " << std::endl;
-	
+	file << " /______/_______\\   " << std::endl;
+	file << "    ||      ||       " << std::endl;
+	file << "    ||      ||       " << std::endl;
+
 	file.close();
 	std::cout << "ascii trees created in " << filename << std::endl;
 }
