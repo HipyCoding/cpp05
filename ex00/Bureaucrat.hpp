@@ -6,7 +6,7 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 15:25:03 by candrese          #+#    #+#             */
-/*   Updated: 2025/07/07 23:42:34 by candrese         ###   ########.fr       */
+/*   Updated: 2025/07/08 02:01:35 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ public:
 		public:
 			const char* what() const noexcept override;
 	};
-		
+
 	class GradeTooLowException : public std::exception
 	{
 		public:

@@ -6,7 +6,7 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 03:52:05 by christian         #+#    #+#             */
-/*   Updated: 2025/07/07 23:45:04 by candrese         ###   ########.fr       */
+/*   Updated: 2025/07/08 03:30:52 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,18 @@ RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& o
 // destructor
 RobotomyRequestForm::~RobotomyRequestForm()
 {
-	std::cout << " RobotomyRequestForm destructor called" << std::endl;
+	std::cout << "RobotomyRequestForm destructor called" << std::endl;
 }
 
-// execute function that calls parent execute for checks
+// execute function that checks requirements and performs robotomy
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
-	AForm::execute(executor);
-}
-
-// actual action implementation
-void RobotomyRequestForm::executeAction() const
-{
+	if (!getIsSigned())
+		throw FormNotSignedException();
+	if (executor.getGrade() > getExecGrade())
+		throw GradeTooLowException();
+	
+	// perform the robotomy
 	std::cout << "* drilling noises *" << std::endl;
 	std::cout << "BZZZZZZT! WRRRRRR! CLANK CLANK!" << std::endl;
 	

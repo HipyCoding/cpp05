@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christian <christian@student.42.fr>        +#+  +:+       +#+        */
+/*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 03:52:02 by christian         #+#    #+#             */
-/*   Updated: 2025/07/03 04:13:30 by christian        ###   ########.fr       */
+/*   Updated: 2025/07/08 02:51:08 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ public:
 	~PresidentialPardonForm();
 
 	void execute(Bureaucrat const & executor) const override;
-
-protected:
-	void executeAction() const override;
 };
 
 #endif

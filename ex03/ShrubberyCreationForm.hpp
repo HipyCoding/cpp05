@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christian <christian@student.42.fr>        +#+  +:+       +#+        */
+/*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 03:52:13 by christian         #+#    #+#             */
-/*   Updated: 2025/07/03 04:12:22 by christian        ###   ########.fr       */
+/*   Updated: 2025/07/08 02:45:11 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,6 @@ public:
 	~ShrubberyCreationForm();
 
 	void execute(Bureaucrat const & executor) const override;
-
-protected:
-	void executeAction() const override;
 };
 
 #endif

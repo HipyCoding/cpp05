@@ -6,7 +6,7 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 03:51:59 by christian         #+#    #+#             */
-/*   Updated: 2025/07/07 23:46:11 by candrese         ###   ########.fr       */
+/*   Updated: 2025/07/08 03:30:10 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,17 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 // destructor
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-	std::cout << " PresidentialPardonForm destructor called" << std::endl;
+	std::cout << "PresidentialPardonForm destructor called" << std::endl;
 }
 
-// function that calls parent execute for checks
+// execute function that checks requirements and grants pardon
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
-	AForm::execute(executor);
-}
-
-// action implementation
-void PresidentialPardonForm::executeAction() const
-{
+	if (!getIsSigned())
+		throw FormNotSignedException();
+	if (executor.getGrade() > getExecGrade())
+		throw GradeTooLowException();
+	
+	// grant the pardon
 	std::cout << target << " has been pardoned by Zaphod Beeblebrox" << std::endl;
 }

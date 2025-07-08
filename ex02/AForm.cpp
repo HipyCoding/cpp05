@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christian <christian@student.42.fr>        +#+  +:+       +#+        */
+/*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 20:51:51 by candrese          #+#    #+#             */
-/*   Updated: 2025/07/03 04:19:36 by christian        ###   ########.fr       */
+/*   Updated: 2025/07/08 03:29:14 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,16 +77,6 @@ void AForm::beSigned(const Bureaucrat& bureaucrat)
 	if (bureaucrat.getGrade() > signGrade)
 		throw GradeTooLowException();
 		isSigned = true;
-}
-
-// execute function that checks requirements and calls action
-void AForm::execute(Bureaucrat const & executor) const
-{
-	if (!isSigned)
-		throw FormNotSignedException();
-	if (executor.getGrade() > execGrade)
-		throw GradeTooLowException();
-	executeAction();
 }
 
 // exception for grade too high

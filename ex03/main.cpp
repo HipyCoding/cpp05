@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: christian <christian@student.42.fr>        +#+  +:+       +#+        */
+/*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 20:51:58 by candrese          #+#    #+#             */
-/*   Updated: 2025/07/06 22:36:53 by christian        ###   ########.fr       */
+/*   Updated: 2025/07/08 02:56:01 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(void)
 	{
 		form[0] = someRandomIntern.makeForm("shrubbery creation", "Tree");
 		form[1] = someRandomIntern.makeForm("robotomy request", "Bot");
-		form[2] = someRandomIntern.makeForm("Donald Trump pardon", "Musk");
+		form[2] = someRandomIntern.makeForm("presidential pardon", "Musk");
 		
 		for (int i = 0; i < 3; i++)
 		{

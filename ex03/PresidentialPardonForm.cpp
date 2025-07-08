@@ -6,13 +6,12 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 03:51:59 by christian         #+#    #+#             */
-/*   Updated: 2025/07/07 23:50:37 by candrese         ###   ########.fr       */
+/*   Updated: 2025/07/08 02:50:20 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 
-// default constructor
 PresidentialPardonForm::PresidentialPardonForm() : AForm("PresidentialPardonForm", 25, 5), target("default")
 {}
 
@@ -40,17 +39,17 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
 // destructor
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-	std::cout << " PresidentialPardonForm destructor called" << std::endl;
+	std::cout << "PresidentialPardonForm destructor called" << std::endl;
 }
 
-// execute function that calls parent execute for checks
+// execute function that checks requirements and grants pardon
 void PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
-	AForm::execute(executor);
-}
-
-// actual action implementation
-void PresidentialPardonForm::executeAction() const
-{
+	if (!getIsSigned())
+		throw FormNotSignedException();
+	if (executor.getGrade() > getExecGrade())
+		throw GradeTooLowException();
+	
+	// grant the pardon
 	std::cout << target << " has been pardoned by Zaphod Beeblebrox" << std::endl;
 }

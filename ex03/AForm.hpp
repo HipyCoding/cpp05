@@ -6,7 +6,7 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 20:51:54 by candrese          #+#    #+#             */
-/*   Updated: 2025/07/07 23:48:43 by candrese         ###   ########.fr       */
+/*   Updated: 2025/07/08 02:41:34 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,6 @@ public:
 	bool getIsSigned() const;
 	int getSignGrade() const;
 	int getExecGrade() const;
-
-protected:
-	virtual void executeAction() const = 0;
 };
 
 std::ostream& operator<<(std::ostream& out, const AForm& src);

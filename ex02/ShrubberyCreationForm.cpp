@@ -6,7 +6,7 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 03:52:10 by christian         #+#    #+#             */
-/*   Updated: 2025/07/07 23:44:34 by candrese         ###   ########.fr       */
+/*   Updated: 2025/07/08 03:31:42 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,18 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 // destructor
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-	std::cout << " ShrubberyCreationForm destructor called" << std::endl;
+	std::cout << "ShrubberyCreationForm destructor called" << std::endl;
 }
 
-// function calls parent execute for checks
+// execute function that checks requirements and creates trees
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-	AForm::execute(executor);
-}
-
-// action implementation
-void ShrubberyCreationForm::executeAction() const
-{
+	if (!getIsSigned())
+		throw FormNotSignedException();
+	if (executor.getGrade() > getExecGrade())
+		throw GradeTooLowException();
+	
+	// create the shrubbery file
 	std::string filename = target + "_shrubbery";
 	std::ofstream file(filename.c_str());
 	

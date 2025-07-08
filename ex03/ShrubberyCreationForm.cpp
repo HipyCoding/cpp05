@@ -6,7 +6,7 @@
 /*   By: candrese <candrese@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 03:52:10 by christian         #+#    #+#             */
-/*   Updated: 2025/07/07 23:54:14 by candrese         ###   ########.fr       */
+/*   Updated: 2025/07/08 02:47:27 by candrese         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,18 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 // destructor
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-	std::cout << " ShrubberyCreationForm destructor called" << std::endl;
+	std::cout << "ShrubberyCreationForm destructor called" << std::endl;
 }
 
-// execute function that calls parent execute for checks
+// execute function that checks requirements and creates trees
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-	AForm::execute(executor);
-}
-
-// actual action implementation
-void ShrubberyCreationForm::executeAction() const
-{
+	if (!getIsSigned())
+		throw FormNotSignedException();
+	if (executor.getGrade() > getExecGrade())
+		throw GradeTooLowException();
+	
+	// create the shrubbery file
 	std::string filename = target + "_shrubbery";
 	std::ofstream file(filename.c_str());
 	
@@ -61,14 +61,14 @@ void ShrubberyCreationForm::executeAction() const
 		return;
 	}
 	
-	file << "                     " << std::endl;
-	file << "    /\\    /\\       " << std::endl;
-	file << "   /  \\  /  \\      " << std::endl;
-	file << "  /    \\/    \\     " << std::endl;
-	file << " /______/_______\\   " << std::endl;
-	file << "    ||      ||       " << std::endl;
-	file << "    ||      ||       " << std::endl;
-
+	file << "                   " << std::endl;
+	file << "    /\\    /\\     " << std::endl;
+	file << "   /  \\  /  \\    " << std::endl;
+	file << "  /    \\/    \\   " << std::endl;
+	file << " /______/______\\  " << std::endl;
+	file << "    ||      ||     " << std::endl;
+	file << "    ||      ||     " << std::endl;
+	file << "                   " << std::endl;
 	file.close();
 	std::cout << "ascii trees created in " << filename << std::endl;
 }
